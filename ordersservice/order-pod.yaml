@@ -1,0 +1,10 @@
+apiVersion: v1
+kind: Pod
+metadata: 
+  name: order-pod
+  labels:
+      app: orderapp
+spec:
+  containers:
+    - name: order-container
+      image: kiranbirkaur/ordersservice

@@ -1,0 +1,10 @@
+apiVersion: v1
+kind: Pod
+metadata: 
+  name: user-pod
+  labels:
+      app: userapp
+spec:
+  containers:
+    - name: user-container
+      image: kiranbirkaur/userservice

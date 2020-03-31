@@ -1,0 +1,25 @@
+apiVersion: apps/v1 
+kind: Deployment
+metadata:
+  name: agg-app
+  labels:
+    app: agg-app
+spec:
+  selector:
+    matchLabels:
+      app: agg-app
+  replicas: 3
+  template:
+    metadata:
+      labels:
+        app: agg-app
+    spec:
+      containers:
+      - name: agg-app
+        image: kiranbirkaur/aggservice
+        env:
+        - name: "USER_URL"
+          value: "http://user-deployment-c4snx"
+        - name: "ORDERS_URL"
+          value: "http://order-deployment-q5fqn" 
+ 
