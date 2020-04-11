@@ -1,8 +1,8 @@
 package org.nagarro.microservices.userservice.service;
 
-import org.nagarro.microservices.userservice.entities.UserModel;
+import org.nagarro.microservices.userservice.entities.User;
 
 public interface UserService {
 
-	UserModel getUserData(final int id);
+	User getUserData(final int id);
 }
